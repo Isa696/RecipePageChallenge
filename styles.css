@@ -1,0 +1,245 @@
+/*custom css Reset*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/* root styles */
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --stone-100: hsl(30, 54%, 90%);
+    --stone-150: hsl(30, 18%, 87%);
+    --stone-600: hsl(30, 10%, 34%);
+    --stone-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+}
+/* fonts styles */
+@font-face {
+    font-family: 'Young-Serif-regular';
+    src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Outfit-regular';
+    src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Outfit-bold';
+    src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Outfit-bolder';
+    src: url('./assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+body {
+    position: relative;
+}
+/* main */
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--stone-100);
+    min-height: 100vh;
+    height: auto;
+}
+
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    padding: 2em;
+    background-color: var(--white);
+    border-radius: 1em;
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 5em;
+    margin-top: 2em;
+}
+.recipe-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.recipe-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 450px) {
+    .recipe-card {
+        margin-top: 0;
+        padding: 0 0 2em 0;
+        width: 100%;
+    .recipe-image {
+        border-radius: 0;
+    }
+    .recipe-card-body {
+        padding: 0 1em;
+    }
+}
+}
+/* recipe header */
+
+.recipe-title {
+    width: 100%;
+    font-family: 'Young-Serif-regular';
+    font-size: 2rem;
+}
+.recipe-description {
+    font-size: 1em;
+    font-family: 'Outfit-regular';
+    color: var(--stone-600);
+    width: 100%;
+}
+/* details */
+.details-card {
+    width: 100%;
+    background-color: var(--rose-50);
+    border-radius: 10px;
+    padding: 1em;
+}
+
+.details-title {
+    width: 100%;
+    font-family: 'Outfit-bolder';
+    font-size: 1.25em;
+    width: 100%;
+    color: var(--rose-800);
+}
+
+li{
+    font-size: 1em;
+    font-family: 'outfit-regular';
+    color: var(--stone-600)
+}
+
+.details-li-span {
+    font-family: 'outfit-bold';
+}
+
+/* main */
+.subtitle {
+    width: 100%;
+    font-family: 'Outfit-bolder';
+    color: var(--brown-800);
+    font-size: 1.5em;
+}
+
+.ingredients-ul li::marker {
+    color: var(--brown-800);
+}
+
+.instructions-ol li::marker {
+    color: var(--brown-800);
+    font-weight: 600;
+}
+
+hr {
+    border: 1px solid var(--stone-150);
+    width: 100%;
+}
+
+.instructions-li-span {
+    font-family: 'outfit-bold';
+}
+
+.table-p {
+    font-size: 1em;
+    font-family: 'Outfit-regular';
+    color: var(--stone-600);
+
+}
+
+.table-bold {
+    font-size: 1em;
+    font-family: 'Outfit-bold';
+    color: var(--brown-800);
+
+}
+
+table tr td {
+    padding: 0.25em;
+    border-bottom: 1px solid var(--stone-150);
+}
+/* footer */
+.attribution {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    text-align: center;
+    color: var(--stone-900);
+    margin-bottom: 0.5em;
+  }
+  .attribution a {
+      display: inline-block;
+    color: var(--rose-800);
+    text-decoration: none;
+    font-weight: 700;
+    &:hover {
+      color: hsl(228, 45%, 44%);
+      transform-origin: center center;
+      transform: translateY(-5px);
+      transition: 0.5s ease-in-out all;
+      cursor: pointer;
+    }
+  }
